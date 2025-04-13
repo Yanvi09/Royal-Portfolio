@@ -1,20 +1,38 @@
-body {
-  background-color: #1a1a1a;
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
+.butler-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
-.App-header {
-  background-color: #333;
+.butler-avatar {
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  text-align: center;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Times New Roman', Times, serif;
+  transform: translateX(100px);
+  animation: float 5s infinite alternate, glow 1.5s ease-in-out infinite;
 }
 
-nav ul {
-  list-style-type: none;
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-20px);
+  }
 }
 
-nav ul li {
-  display: inline;
-  margin: 10px;
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+  100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
 }
