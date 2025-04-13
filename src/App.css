@@ -1,0 +1,20 @@
+body {
+  background-color: #1a1a1a;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.App-header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 10px;
+}
