@@ -1,0 +1,44 @@
+.vault {
+    min-width: 300px;
+    height: 200px;
+    background: #1a1a1a;
+    border: 2px solid gold;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  .vault.open {
+    height: auto;
+    background: linear-gradient(145deg, #1f1f1f, #000000);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+  }
+  
+  .vault-door {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.5rem;
+    color: gold;
+    font-weight: bold;
+  }
+  
+  .vault-content {
+    padding: 1rem;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
