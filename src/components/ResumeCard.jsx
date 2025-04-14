@@ -1,13 +1,13 @@
-import React from 'react';
-import '../styles/ResumeCard.css';
+import React from "react";
+import "../styles/ResumeCard.css";
 
-const ResumeCard = ({ title, company, duration, details }) => {
+const ResumeCard = ({ title, company, duration, description }) => {
   return (
     <div className="resume-card">
       <h3>{title}</h3>
-      <p className="company">{company}</p>
-      <p className="duration">{duration}</p>
-      <p className="details">{details}</p>
+      <h4>{company}</h4>
+      <span className="duration">{duration}</span>
+      <p>{description}</p>
     </div>
   );
 };

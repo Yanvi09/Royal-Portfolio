@@ -1,37 +1,25 @@
-/* ResumeWing.css */
-
 .resume-wing {
-  background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
-  padding: 4rem 2rem;
-  color: white;
-  font-family: 'Cinzel', serif;
-  position: relative;
-}
-
-.resume-title {
-  font-size: 2.5rem;
+  padding: 5rem 2rem;
+  background-color: #000;
+  background-image: url("/assets/marble-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
   color: gold;
+  font-family: "Playfair Display", serif;
   text-align: center;
-  margin-bottom: 3rem;
-  text-shadow: 0 0 15px gold;
 }
 
-.resume-cards {
+.wing-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 10px gold;
+}
+
+.resume-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .resume-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .resume-title {
-    font-size: 1.5rem;
-  }
 }
