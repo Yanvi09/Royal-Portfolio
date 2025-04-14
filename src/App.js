@@ -1,41 +1,32 @@
+// App.jsx
 import React from 'react';
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import VaultGallery from './components/VaultGallery';
 import ResumeWing from './components/ResumeWing';
 import CommandRoom from './components/CommandRoom';
 import ContactTerminal from './components/ContactTerminal';
+import Navbar from './components/Navbar';
+import Butler from './components/Butler'; // ⬅️ Add this
 
-function Home() {
+function Layout({ children }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to The Vault</h1>
-        <nav>
-          <ul>
-            <li><Link to="/">AI Butler</Link></li>
-            <li><Link to="/vault">Vault Gallery</Link></li>
-            <li><Link to="/command">Live Command Room</Link></li>
-            <li><Link to="/resume">Formal Résumé</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <h2>Your Projects and Journey Await...</h2>
-      </main>
-    </div>
+    <>
+      <Navbar />
+      {children}
+      <Butler />
+    </>
   );
 }
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/vault" element={<VaultGallery />} />
-      <Route path="/command" element={<CommandRoom />} />
-      <Route path="/resume" element={<ResumeWing />} />
-      <Route path="/contact" element={<ContactTerminal />} />
+      <Route path="/" element={<Layout><div className="App"><h1>Welcome to The Vault</h1><h2>Your Projects and Journey Await...</h2></div></Layout>} />
+      <Route path="/vault" element={<Layout><VaultGallery /></Layout>} />
+      <Route path="/command" element={<Layout><CommandRoom /></Layout>} />
+      <Route path="/resume" element={<Layout><ResumeWing /></Layout>} />
+      <Route path="/contact" element={<Layout><ContactTerminal /></Layout>} />
     </Routes>
   );
 }

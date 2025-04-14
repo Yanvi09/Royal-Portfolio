@@ -1,21 +1,40 @@
+/* Importing Luxurious Font */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
+/* Base styles for body and html */
 body, html {
   margin: 0;
   padding: 0;
   background-color: #0c0c0c;
   color: white;
   font-family: 'Cinzel', serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* App Wrapper */
+.App {
+  padding: 40px;
+  font-family: 'Georgia', serif;
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Link Transition */
+a {
+  transition: all 0.3s ease;
+}
+
+/* Smooth scrolling and container tweaks */
 .app-container {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+/* Section layout */
 section {
   padding: 6rem 2rem;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1); /* Subtle gold */
 }
 
 /* Butler floating style */
@@ -37,6 +56,7 @@ section {
   animation: float 5s infinite alternate, glow 1.5s ease-in-out infinite;
 }
 
+/* Floating Animation */
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -46,6 +66,7 @@ section {
   }
 }
 
+/* Glowing Animation */
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
