@@ -31,6 +31,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/vault" element={<VaultGallery />} />
+      <Route path="/command" element={<CommandRoom />} />
+
     </Routes>
   );
 }
