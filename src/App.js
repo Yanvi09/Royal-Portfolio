@@ -9,9 +9,11 @@ import CommandRoom from './components/CommandRoom';
 import ContactTerminal from './components/ContactTerminal';
 import Navbar from './components/Navbar';
 import Butler from './components/Butler';
-import useButlerVoice from './hooks/useButlerVoice'; // ✅ Butler Voice Hook
 
-// Layout wraps each page with Navbar and Butler
+import useButlerVoice from './hooks/useButlerVoice';     // ✅ Butler voice greeting
+import useVoiceCommands from './hooks/useVoiceCommands'; // ✅ Voice command listener
+
+// Layout wraps each route with Navbar + Butler
 function Layout({ children }) {
   return (
     <>
@@ -22,9 +24,10 @@ function Layout({ children }) {
   );
 }
 
-// Home page with Octavian's greeting
+// Home page: speaks on load + listens for voice commands
 function Home() {
   const speak = useButlerVoice();
+  useVoiceCommands(); // ✅ Voice commands activated
 
   useEffect(() => {
     speak("Greetings, esteemed guest. Welcome to The Vault. I am Octavian, your AI Concierge.");
@@ -51,7 +54,7 @@ function Home() {
   );
 }
 
-// Main App Component with Routes
+// App component with all routes
 function App() {
   return (
     <Routes>
