@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import React from 'react';
-import './ResumeWing.css';
+import '../styles/ResumeWing.css';
 import ResumeCard from './ResumeCard';
 
 const experiences = [

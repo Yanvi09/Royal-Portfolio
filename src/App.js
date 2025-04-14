@@ -1,38 +1,18 @@
-// App.jsx
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import VaultGallery from './components/VaultGallery';
-import ResumeWing from './components/ResumeWing';
-import CommandRoom from './components/CommandRoom';
-import ContactTerminal from './components/ContactTerminal';
-import Navbar from './components/Navbar';
-import Butler from './components/Butler';
+// Import pages from the pages folder
+import VaultGallery from './pages/VaultGallery';
+import CommandRoom from './pages/CommandRoom';
 
-import useButlerVoice from './hooks/useButlerVoice';     // ✅ Butler voice greeting
-import useVoiceCommands from './hooks/useVoiceCommands'; // ✅ Voice command listener
+// Import components from the components folder
+import ResumeWing from './components/ResumeWing'; // This file should import its css from ../styles/
+import ContactTerminal from './components/ContactTerminal'; // Also imports its CSS from ../styles/
+import Navbar from './components/Navbar'; // Will import its css from ../styles/
+import AIButler from './components/AIButler'; // Your AI Butler component
 
-// Layout wraps each route with Navbar + Butler
-function Layout({ children }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-      <Butler />
-    </>
-  );
-}
-
-// Home page: speaks on load + listens for voice commands
 function Home() {
-  const speak = useButlerVoice();
-  useVoiceCommands(); // ✅ Voice commands activated
-
-  useEffect(() => {
-    speak("Greetings, esteemed guest. Welcome to The Vault. I am Octavian, your AI Concierge.");
-  }, [speak]);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -54,7 +34,16 @@ function Home() {
   );
 }
 
-// App component with all routes
+function Layout({ children }) {
+  return (
+    <>
+      <Navbar />
+      {children}
+      <AIButler /> {/* Using your AI Butler */}
+    </>
+  );
+}
+
 function App() {
   return (
     <Routes>

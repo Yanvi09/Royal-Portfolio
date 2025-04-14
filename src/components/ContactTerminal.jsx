@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ContactTerminal.css';
+import '../styles/ContactTerminal.css';
 
 const ContactTerminal = () => {
   const [userQuery, setUserQuery] = useState('');

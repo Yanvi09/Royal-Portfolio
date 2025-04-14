@@ -12,6 +12,7 @@
   .chart-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px rgba(0, 255, 204, 0.5);
+    transform: scale(1.03);
   }
   
   .chart-card h2 {
