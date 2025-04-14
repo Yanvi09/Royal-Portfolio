@@ -15,7 +15,6 @@ const experiences = [
     duration: 'Jul 2024 – Dec 2024',
     details: 'Built interactive dashboards using React and Tailwind. Focused on luxury-style UI/UX.',
   },
-  // Add more experience as needed
 ];
 
 const ResumeWing = () => {

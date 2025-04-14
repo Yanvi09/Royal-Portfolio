@@ -4,7 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import VaultGallery from './components/VaultGallery';
 import ResumeWing from './components/ResumeWing';
 import CommandRoom from './components/CommandRoom';
-import ContactTerminal from './components/ContactTerminal'; // ✅ Importing it
+import ContactTerminal from './components/ContactTerminal';
 
 function Home() {
   return (
@@ -17,7 +17,7 @@ function Home() {
             <li><Link to="/vault">Vault Gallery</Link></li>
             <li><Link to="/command">Live Command Room</Link></li>
             <li><Link to="/resume">Formal Résumé</Link></li>
-            <li><Link to="/contact">Contact</Link></li> {/* ✅ Fixed Link */}
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
       </header>
@@ -35,7 +35,7 @@ function App() {
       <Route path="/vault" element={<VaultGallery />} />
       <Route path="/command" element={<CommandRoom />} />
       <Route path="/resume" element={<ResumeWing />} />
-      <Route path="/contact" element={<ContactTerminal />} /> {/* ✅ Route added */}
+      <Route path="/contact" element={<ContactTerminal />} />
     </Routes>
   );
 }
