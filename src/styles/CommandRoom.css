@@ -1,63 +1,74 @@
 /* Glowing black velvet backdrop with neon elements */
 .command-room {
-    background-color: #0a0a0a; /* Velvet black */
-    min-height: 100vh;
-    padding: 3rem;
-    color: white;
-    font-family: 'Space Mono', monospace;
-    display: flex;
+  background-color: #0a0a0a; /* Velvet black */
+  min-height: 100vh;
+  padding: 3rem;
+  color: white;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Elegant title */
+.command-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00ffcc; /* Neon teal */
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+}
+
+/* Grid of Chart Cards */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Tech Ticker — like a stock ticker */
+.tech-ticker {
+  margin-top: 3rem;
+  width: 100%;
+  overflow-x: hidden;
+  background: #101010;
+  border: 1px solid #00ffcc;
+  padding: 1rem 0;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00ffff;
+  position: relative;
+}
+
+/* Animate scroll */
+.tech-ticker span {
+  display: inline-block;
+  margin-right: 3rem;
+  animation: scrollTicker 20s linear infinite;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .command-room {
+    padding: 20px;
+  }
+
+  .charts-container {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
-  
-  /* Elegant title */
-  .command-title {
-    font-size: 2.8rem;
-    font-weight: bold;
-    text-align: center;
-    color: #00ffcc; /* Neon teal */
-    margin-bottom: 2.5rem;
-    text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
-  }
-  
-  /* Grid of Chart Cards */
-  .chart-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  /* Tech Ticker — like a stock ticker */
-  .tech-ticker {
-    margin-top: 3rem;
-    width: 100%;
-    overflow-x: hidden;
-    background: #101010;
-    border: 1px solid #00ffcc;
-    padding: 1rem 0;
-    white-space: nowrap;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #00ffff;
-    position: relative;
-  }
-  
-  /* Animate scroll */
-  .tech-ticker span {
-    display: inline-block;
-    margin-right: 3rem;
-    animation: scrollTicker 20s linear infinite;
-  }
-  
-  @keyframes scrollTicker {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
+}

@@ -1,73 +1,83 @@
 .contact-terminal {
-    background: #101010; /* Deep black background */
-    color: white;
-    padding: 3rem;
-    text-align: center;
-    border-radius: 1.2rem;
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
-    font-family: 'Cinzel', serif;
-    position: relative;
+  background: #101010; /* Deep black background */
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
+  font-family: 'Cinzel', serif;
+  position: relative;
+}
+
+.contact-terminal h2 {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 20px gold;
+}
+
+.instruction-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-input {
+  width: 60%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid gold;
+  background: #222;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.contact-button {
+  background-color: gold;
+  color: #222;
+  padding: 1.2rem 2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #00ffcc;
+  color: #101010;
+  transform: scale(1.05);
+}
+
+.response-message {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-terminal {
+    padding: 20px;
   }
-  
+
   .contact-terminal h2 {
-    font-size: 2.5rem;
-    color: gold;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 20px gold;
+    font-size: 1.5rem;
   }
-  
-  .instruction-text {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #aaa;
-  }
-  
-  .contact-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .contact-input {
-    width: 60%;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 2px solid gold;
-    background: #222;
-    color: white;
-    font-size: 1.1rem;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .contact-input:focus {
-    outline: none;
-    border-color: #00ffcc;
-    box-shadow: 0 0 10px #00ffcc;
-  }
-  
-  .contact-button {
-    background-color: gold;
-    color: #222;
-    padding: 1.2rem 2rem;
-    border-radius: 8px;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .contact-button:hover {
-    background-color: #00ffcc;
-    color: #101010;
-    transform: scale(1.05);
-  }
-  
-  .response-message {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: #00ffcc;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
-  }
-  
+}
