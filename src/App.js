@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 
+import ButlerOverlay from './components/ButlerOverlay'
+
 // Import pages from the pages folder
 import VaultGallery from './pages/VaultGallery';
 import CommandRoom from './pages/CommandRoom';
@@ -52,6 +54,7 @@ function App() {
       <Route path="/command" element={<Layout><CommandRoom /></Layout>} />
       <Route path="/resume" element={<Layout><ResumeWing /></Layout>} />
       <Route path="/contact" element={<Layout><ContactTerminal /></Layout>} />
+      <Route path="/butler" element={<Layout><ButlerOverlay /></Layout>} />
     </Routes>
   );
 }

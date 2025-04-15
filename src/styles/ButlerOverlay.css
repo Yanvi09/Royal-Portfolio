@@ -1,0 +1,75 @@
+/* styles/ButlerOverlay.css */
+
+.butler-overlay {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    font-family: 'Georgia', serif;
+  }
+  
+  .butler-button {
+    background-color: gold;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .butler-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .butler-icon {
+    font-size: 32px;
+    color: black;
+  }
+  
+  .butler-dialogue {
+    background-color: rgba(15, 15, 15, 0.9);
+    color: gold;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    border: 1px solid gold;
+    margin-top: 1rem;
+    width: 260px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    animation: slideUp 0.5s ease-in-out;
+  }
+  
+  .butler-options {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .butler-options button {
+    background-color: #111;
+    color: white;
+    border: 1px solid gold;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .butler-options button:hover {
+    background-color: gold;
+    color: black;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  

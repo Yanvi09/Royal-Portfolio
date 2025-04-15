@@ -7,7 +7,6 @@ const ContactTerminal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate AI Response (Octavian speaking)
     const answers = [
       "Good evening. Your request is now in the queue. Octavian will attend shortly.",
       "Ah, I see. Your question is quite intriguing. Allow me to look into that.",
@@ -19,23 +18,23 @@ const ContactTerminal = () => {
 
   return (
     <section className="contact-terminal">
-      <h2>✨ Summon Octavian ✨</h2>
-      <p className="instruction-text">Have a question or request? Speak to Octavian, and he’ll guide you.</p>
+      <div className="terminal-glass">
+        <h2 className="terminal-title">✨ Request an Audience with Octavian ✨</h2>
+        <p className="terminal-instruction">Speak your mind, and the butler shall respond with grace.</p>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Type your request..."
-          className="contact-input"
-          value={userQuery}
-          onChange={(e) => setUserQuery(e.target.value)}
-        />
-        <button type="submit" className="contact-button">
-          Request an Audience
-        </button>
-      </form>
+        <form className="terminal-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Your royal command..."
+            className="terminal-input"
+            value={userQuery}
+            onChange={(e) => setUserQuery(e.target.value)}
+          />
+          <button type="submit" className="terminal-button">Summon Response</button>
+        </form>
 
-      {response && <div className="response-message">{response}</div>}
+        {response && <div className="terminal-response">{response}</div>}
+      </div>
     </section>
   );
 };
