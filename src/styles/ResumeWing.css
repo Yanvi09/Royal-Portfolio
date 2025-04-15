@@ -1,7 +1,7 @@
 .resume-wing {
   padding: 5rem 2rem;
   background-color: #000;
-  background-image: url("/assets/marble-bg.png");
+  background-image: url("/src/styles/marble-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
