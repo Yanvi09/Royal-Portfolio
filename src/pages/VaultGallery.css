@@ -19,4 +19,59 @@
     gap: 2rem;
     padding-bottom: 1rem;
   }
-  
+  .vault-gallery {
+     background: linear-gradient(to bottom, #0b0b0b, #111);
+     padding: 3rem 2rem;
+     color: white;
+     min-height: 100vh;
+     font-family: 'Playfair Display', serif;
+    }
+    
+    .vault-title {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: gold;
+      text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+    }
+    
+    .vault-subtitle {
+      text-align: center;
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    
+    .vault-scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .vault-scroll-container::-webkit-scrollbar {
+      height: 10px;
+    }
+    
+    .vault-scroll-container::-webkit-scrollbar-track {
+      background: #1a1a1a;
+      border-radius: 10px;
+    }
+    
+    .vault-scroll-container::-webkit-scrollbar-thumb {
+       background: gold;
+       border-radius: 10px;
+       border: 2px solid #111;
+    }
+    
+    @media (max-width: 768px) {
+      .vault-title {
+         font-size: 2rem;
+      }
+      .vault-scroll-container {
+       gap: 1rem;
+      }
+    }
+    
