@@ -21,6 +21,7 @@
   
   .butler-button:hover {
     transform: scale(1.1);
+    animation: floatElegantly 3s ease-in-out infinite;
   }
   
   .butler-icon {
@@ -72,4 +73,8 @@
       opacity: 1;
     }
   }
-  
+  @keyframes floatElegantly {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
