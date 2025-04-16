@@ -1,3 +1,4 @@
+// src/components/ResumeWing.jsx
 import React from "react";
 import ResumeCard from "../components/ResumeCard";
 import "../styles/ResumeWing.css";
@@ -8,19 +9,22 @@ const ResumeWing = () => {
       title: "Python Intern",
       company: "CodeNova Pvt Ltd",
       duration: "Mar 2025 - Present",
-      description: "Built optimized Flask APIs and automated reports using Pandas and Requests.",
+      description:
+        "Built optimized Flask APIs and automated reports using Pandas and Requests.",
     },
     {
       title: "Web Developer Intern",
       company: "TechElite",
       duration: "June 2024 - Sept 2024",
-      description: "Developed responsive MERN stack interfaces and integrated real-time WebSocket updates.",
+      description:
+        "Developed responsive MERN stack interfaces and integrated real-time WebSocket updates.",
     },
     {
       title: "GoLang Specialist",
       company: "Freelance",
       duration: "Jan 2024 - Apr 2024",
-      description: "Built concurrent Go microservices for scalable fintech backend systems.",
+      description:
+        "Built concurrent Go microservices for scalable fintech backend systems.",
     },
   ];
 

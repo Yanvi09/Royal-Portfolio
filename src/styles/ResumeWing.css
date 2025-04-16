@@ -1,3 +1,4 @@
+/* src/styles/ResumeWing.css */
 .resume-wing {
   padding: 5rem 2rem;
   background-color: #000;
@@ -22,4 +23,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
