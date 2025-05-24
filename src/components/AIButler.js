@@ -34,14 +34,14 @@ const AIButler = () => {
     } else if (command === 'resume') {
       const msg = "Let me take you to the Formal Résumé Wing.";
       setMessage(msg);
-      speakAndNavigate(msg, '/chronicle');
+      speakAndNavigate(msg, '/resume');
     }
 
     
     else if (command === 'royal') {
       const msg = "Let me Lead you to the Royal path .";
       setMessage(msg);
-      speakAndNavigate(msg, '/resume');
+      speakAndNavigate(msg, '/chronicle');
     }
     
 
