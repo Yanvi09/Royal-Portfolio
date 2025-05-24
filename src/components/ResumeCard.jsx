@@ -1,3 +1,7 @@
+//Ek résumé block hota hai – naam, skills, experience dikhata hai.
+// Multiple cards banakar resume dikhaya ja sakta hai.
+
+
 import React from "react";
 import "../styles/ResumeCard.css";
 

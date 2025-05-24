@@ -1,3 +1,8 @@
+//Ye ek chart ya graph dikhata hai – jaise metrics ke liye.
+// Dashboard mein live data ya stats yahi dikhata hai.
+
+
+
 import React from "react";
 import "./ChartCard.css";
 

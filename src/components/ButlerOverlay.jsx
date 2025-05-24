@@ -1,3 +1,12 @@
+// Poore screen pe ek overlay ya AI popup dikhane ke liye hai.
+//Jaise guided tour ya AI ke message box jaisa.
+
+
+
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import '../styles/ButlerOverlay.css';
 import { FaRobot } from 'react-icons/fa';
